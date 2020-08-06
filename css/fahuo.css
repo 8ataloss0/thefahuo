@@ -1,0 +1,382 @@
+* {
+	margin: 0 auto;
+	/* overflow: hidden; */
+	font-size: 14px;
+	text-decoration: none;
+	list-style-type: none;
+	cursor: pointer;
+}
+
+body {
+	background-color: #fafafa;
+}
+
+@media screen and (min-width: 960px) {
+	.container {
+		width:100%;
+		min-height: 100%;
+		position: relative;
+		text-align: center;
+		overflow: hidden;
+	}
+	.kuang{
+		width:10rem;
+		height: 24rem;
+		min-height: 100%;
+		margin: 0 auto;
+		border:1px solid #187ae5;
+		position: relative;
+	}
+
+	header {
+		width: 100%;
+		text-align: center;
+	}
+
+	header .header-in {
+		height: 1.4rem;
+		background-color: #187ae5;
+		text-align: center;
+
+	}
+
+	header .header-in .return {
+		float: left;
+		line-height: 1.6rem;
+		padding-left: 0.2rem;
+	}
+
+	header .header-in .return a {
+		font-size: 0.5rem;
+		color: white;
+	}
+
+	header .header-in .return b {
+		font-size: 0.6rem;
+		height: 0.4rem;
+	}
+
+	header .header-in p {
+		width: 6rem;
+		font-size: 0.56rem;
+		color: white;
+		font-weight: bold;
+		text-align: center;
+		line-height: 1.7rem;
+		margin-left: 2rem;
+	}
+
+	.section {
+		width: 100%;
+		float: left;
+	}
+
+	.section .section_one {
+		max-width: 98%;
+	}
+	
+	.section .section_one .weui-cells .weui-input{
+		width:3rem;
+	}
+
+	.section .section_one p {
+		font-size: 0.44rem;
+		float: left;
+		display: block;
+		padding: 0 0.2rem;
+		margin-top: 0.1rem;
+	}
+
+	.section .section_one select {
+		float: left;
+		width: 3.2rem;
+		height: 0.8rem;
+		border: 0.01rem solid #dfdfdf;
+	}
+
+	.section .section_two {
+		max-width: 94%;
+		text-align: center;
+		clear: both;
+
+	}
+
+	.section .section_two button {
+		width: 2.2rem;
+		height: 0.9rem;
+		margin-top: 0.2rem;
+		color: #FFFFFF;
+		font-size: 0.4rem;
+		border-radius: 0.1rem;
+		background-color: #1575db;
+		border: 0;
+	}
+
+	.section_three {
+		max-width: 98%;
+		text-align: center;
+	}
+
+	.section .section_three p {
+		font-size: 0.44rem;
+		float: left;
+		display: block;
+		padding: 0 0.2rem;
+		margin-top: 0.3rem;
+	}
+
+	.section .section_three select {
+		float: left;
+		width: 7rem;
+		height: 0.8rem;
+		margin-top: 0.2rem;
+		border: 0.01rem solid #dfdfdf;
+	}
+
+	.section .section_three select{
+		color: #f37b53;
+	}
+
+	.section_four {
+		max-width: 98%;
+		text-align: center;
+
+	}
+
+	.section .section_four p {
+		font-size: 0.44rem;
+		float: left;
+		display: block;
+		padding: 0 0.2rem;
+		margin-top: 0.3rem;
+	}
+
+	.section .section_four input {
+		float: left;
+		display: inline-block;
+		width: 4.2rem;
+		height: 0.4rem;
+		margin-top: 0.2rem;
+		padding: 0.2rem;
+		border: 0.01rem solid #dfdfdf;
+	}
+
+	.section .section_four button {
+		width: 2.2rem;
+		height: 0.9rem;
+		margin-top: 0.2rem;
+		color: #FFFFFF;
+		font-size: 0.4rem;
+		border-radius: 0.1rem;
+		background-color: #1575db;
+		border: 0;
+	}
+
+	.section_five {
+		max-width: 100%;
+		text-align: center;
+	}
+	table{
+		width: 100%;
+		margin-top: 0.2rem;
+		border-collapse: collapse;
+		background-color:  #1575db;
+	}
+	table,td,th{
+		color: #FFFFFF;
+		border-left: 0.01rem solid #333333;
+		border-right: 0.01rem solid #333333;
+		font-size: 0.34rem;
+		font-weight: 100;
+		padding: 0.2rem;
+	}
+	.xiangshu{
+		position: fixed;
+		bottom: 2%;
+		right: 36%;
+	}
+	.xiangshu p{
+		font-size: 0.4rem;
+		font-weight:560;
+	}
+	
+	
+
+}
+
+@media screen and (max-width: 960px) {
+	.container {
+		width: 100%;
+		min-height: 100%;
+		height: auto !important;
+		height: 100%;
+		position: relative;
+	}
+	header {
+		width: 100%;
+	}
+
+	header .header-in {
+		height: 1.4rem;
+		background-color: #187ae5;
+		text-align: center;
+
+	}
+
+	header .header-in .return {
+		float: left;
+		line-height: 1.6rem;
+		padding-left: 0.2rem;
+	}
+
+	header .header-in .return a {
+		font-size: 0.5rem;
+		color: white;
+	}
+
+	header .header-in .return b {
+		font-size: 0.6rem;
+		height: 0.4rem;
+	}
+
+	header .header-in p {
+		width: 6rem;
+		font-size: 0.56rem;
+		color: white;
+		font-weight: bold;
+		text-align: center;
+		line-height: 1.7rem;
+		margin-left: 2rem;
+	}
+
+	.section {
+		width: 100%;
+		float: left;
+	}
+
+	.section .section_one {
+		max-width: 98%;
+	}
+
+	.section .section_one p {
+		font-size: 0.44rem;
+		float: left;
+		display: block;
+		padding: 0 0.2rem;
+		margin-top: 0.1rem;
+	}
+
+	.section .section_one select {
+		float: left;
+		width: 3.2rem;
+		height: 0.8rem;
+		border: 0.01rem solid #dfdfdf;
+	}
+
+	.section .section_two {
+		max-width: 94%;
+		text-align: center;
+
+	}
+
+	.section .section_two button {
+		width: 2.2rem;
+		height: 0.9rem;
+		margin-top: 0.2rem;
+		color: #FFFFFF;
+		font-size: 0.4rem;
+		border-radius: 0.1rem;
+		background-color: #1575db;
+		border: 0;
+	}
+
+	.section_three {
+		max-width: 98%;
+		text-align: center;
+	}
+
+	.section .section_three p {
+		font-size: 0.44rem;
+		float: left;
+		display: block;
+		padding: 0 0.2rem;
+		margin-top: 0.3rem;
+	}
+
+	.section .section_three select {
+		float: left;
+		width: 7rem;
+		height: 0.8rem;
+		margin-top: 0.2rem;
+		border: 0.01rem solid #dfdfdf;
+	}
+
+	.section .section_three select{
+		color: #f37b53;
+	}
+
+	.section_four {
+		max-width: 98%;
+		text-align: center;
+
+	}
+
+	.section .section_four p {
+		font-size: 0.44rem;
+		float: left;
+		display: block;
+		padding: 0 0.2rem;
+		margin-top: 0.3rem;
+	}
+
+	.section .section_four input {
+		float: left;
+		width: 4.2rem;
+		height: 0.4rem;
+		margin-top: 0.2rem;
+		padding: 0.2rem;
+		border: 0.01rem solid #dfdfdf;
+	}
+
+	.section .section_four button {
+		width: 2.2rem;
+		height: 0.9rem;
+		margin-top: 0.2rem;
+		color: #FFFFFF;
+		font-size: 0.4rem;
+		border-radius: 0.1rem;
+		background-color: #1575db;
+		border: 0;
+	}
+
+	.section_five {
+		max-width: 100%;
+		text-align: center;
+	}
+	table{
+		width: 100%;
+		margin-top: 0.2rem;
+		border-collapse: collapse;
+		background-color:  #1575db;
+	}
+	table,td,th{
+		color: #FFFFFF;
+		border-left: 0.01rem solid #333333;
+		border-right: 0.01rem solid #333333;
+		font-size: 0.34rem;
+		font-weight: 100;
+		padding: 0.2rem;
+	}
+	.xiangshu{
+		position: fixed;
+		bottom: 2%;
+		right: 10%;
+	}
+	.xiangshu p{
+		font-size: 0.4rem;
+		font-weight:560;
+	}
+	
+	
+
+}

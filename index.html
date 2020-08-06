@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Cache-Control" content="no-transform" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/fahuo.css" />
+		<link rel="stylesheet" type="text/css" href="css/weui.css" />
+		<link rel="stylesheet" type="text/css" href="css/weui.min.css" />
+		<script src="./js/jquery-2.1.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			$(function() {
+				//创建一个当前日期对象
+				var now = new Date();
+				//格式化日，如果小于9，前面补0
+				var day = ("0" + now.getDate()).slice(-2);
+				//格式化月，如果小于9，前面补0
+				var month = ("0" + (now.getMonth() + 1)).slice(-2);
+				//拼装完整日期格式
+				var today = now.getFullYear() + "-" + (month) + "-" + (day);
+
+				//近三天
+				var now3 = new Date();
+				//格式化日，如果小于9，前面补0
+				var day = ("0" + (now3.getDate() - 3)).slice(-2);
+				//格式化月，如果小于9，前面补0
+				var month = ("0" + (now3.getMonth() + 1)).slice(-2);
+				//拼装完整日期格式
+				var threeday = now3.getFullYear() + "-" + (month) + "-" + (day);
+
+				//本周
+				var now3 = new Date();
+				//格式化日，如果小于9，前面补0
+				var day = ("0" + (now3.getDate() + 6)).slice(-2);
+				//格式化月，如果小于9，前面补0
+				var month = ("0" + (now3.getMonth() + 1)).slice(-2);
+				//拼装完整日期格式
+				var weekday = now3.getFullYear() + "-" + (month) + "-" + (day);
+				//完成赋值
+				$("#now").click(function() {
+					$("#date-one").val(today);
+					$("#date-two").val(today);
+				})
+				$("#threeday").click(function() {
+					$("#date-one").val(threeday);
+					$("#date-two").val(today);
+				})
+				// $("#weekday").click(function(){
+				// 	$("#date-one").val(today);
+				// 	$("#date-two").val(weekday);
+				// })
+
+
+
+			});
+		</script>
+	</head>
+	<body onload="getTime()">
+		<div class="container">
+			<div class="kuang">
+				<header>
+					<div class="header-in">
+						<div class="return"><a href=""><b>
+									<</b>&nbsp;返回 </a> </div> <p>发货查询</p>
+						</div>
+				</header>
+				<div class="section">
+					<div class="section_one">
+						<p>出库时间：</p>
+						<div class="weui-cells" style="width: 3.2rem;height: 0.8rem;float: left;margin: 0;">
+							<div class="weui-cell" style="width: 3.2rem;height:0.6rem;float: left;margin: 0;padding:0.1rem;border: 0.01rem solid #dfdfdf;">
+
+								<input class="weui-input" type="date" id="date-one" value="" style="width: 3rem;">
+
+							</div>
+						</div>
+						<p>-</p>
+						<div class="weui-cells" style="width: 3.2rem;height: 0.8rem;float: left;margin: 0;">
+							<div class="weui-cell" style="width: 3.2rem;height:0.6rem;float: left;margin: 0;padding:0.1rem;border: 0.01rem solid #dfdfdf;">
+
+								<input class="weui-input" type="date" id="date-two" value="" style="width: 3rem;">
+
+							</div>
+						</div>
+					</div>
+					<div class="section_two">
+						<button type="button" id="now">当天</button>
+						<button type="button" id="threeday">近三天</button>
+						<button type="button" id="weekday" onclick="weekday()">本周</button>
+						<button type="button" id="mothday" onclick="mothday()">本月</button>
+					</div>
+					<div class="section_three">
+						<p>产品名称：</p>
+						<select name="" id="">
+							<option value="" selected="selected">全部</option>
+							<option value="">2020-08-01</option>
+							<option value="">2020-08-01</option>
+							<option value="">2020-08-01</option>
+							<option value="">2020-08-01</option>
+						</select>
+					</div>
+					<div style="clear: both;"></div>
+					<div class="section_four">
+						<p>收 货 人：</p>
+						<input type="" name="" id="" value="" placeholder="收货人姓名" />
+						<button type="button">开始查询</button>
+					</div>
+					<div class="section_five">
+						<table border="0" cellspacing="" cellpadding="">
+							<tr>
+								<th>序号</th>
+								<th>出库日期</th>
+								<th>产品名称</th>
+								<th>客户名称</th>
+								<th>箱数</th>
+							</tr>
+
+						</table>
+					</div>
+					<div class="xiangshu">
+						<p>总箱数：&nbsp;&nbsp;0</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<script>
+		
+			function getTime(n) {
+				var now = new Date();
+				var year = now.getFullYear();
+				//因为月份是从0开始的,所以获取这个月的月份数要加1才行
+				var month = now.getMonth() + 1;
+				var date = now.getDate();
+				var day = now.getDay();
+				//判断是否为周日,如果不是的话,就让今天的day-1(例如星期二就是2-1)
+				if (day !== 0) {
+					n = n + (day - 1);
+				} else {
+					n = n + day;
+				}
+				if (day) {
+					//这个判断是为了解决跨年的问题
+					if (month > 1) {
+						month = month;
+					}
+					//这个判断是为了解决跨年的问题,月份是从0开始的
+					else {
+						year = year - 1;
+						month = 12;
+					}
+				}
+				now.setDate(now.getDate() - n);
+				year = now.getFullYear();
+				month = now.getMonth() + 1;
+				date = now.getDate();
+				s = year + "-" + (month < 10 ? ('0' + month) : month) + "-" + (date < 10 ? ('0' + date) : date);
+				return s;
+			}
+
+			function weekday() {
+				document.getElementById("date-one").value = getTime(0);
+				document.getElementById("date-two").value = getTime(-6);
+			}
+			function mothday(){
+				var now = new Date();
+				var year = now.getFullYear();
+				//因为月份是从0开始的,所以获取这个月的月份数要加1才行
+				var month = now.getMonth() + 1;
+				var date = now.getDate();
+				var day = now.getDay();
+				var oneDay=1000*60*60*24;
+				
+				//本月开始时间
+				var monthStartTime =year+"-"+ (month < 10 ? ('0' + month) : month)+"-"+("0"+1);
+				document.getElementById("date-one").value = monthStartTime;
+				
+				//本月结束时间
+				var nextMonthFirstDay = new Date(year,now.getMonth(),1); 
+				var end = new Date(nextMonthFirstDay - oneDay); 
+				var endtime = year+"-"+(month < 10 ? ('0' + month) : month)+"-"+end.getDate();
+				document.getElementById("date-two").value = endtime;
+			}
+			
+		</script>
+	</body>
+</html>
